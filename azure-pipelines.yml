@@ -25,10 +25,11 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
+    configuration: '$(Build.SourcesDirectory)'
     versioningScheme: 'byPrereleaseNumber'
-    majorVersion: $(major)
-    minorVersion: $(minor)
-    patchVersion: $(patch)
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
 
 
 

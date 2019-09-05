@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRules.Integration.AspNetCore", "NRules.Integration.AspNetCore\NRules.Integration.AspNetCore.csproj", "{EBE1025A-CF1E-40E7-8DD5-B6C234148289}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBE1025A-CF1E-40E7-8DD5-B6C234148289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE1025A-CF1E-40E7-8DD5-B6C234148289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE1025A-CF1E-40E7-8DD5-B6C234148289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE1025A-CF1E-40E7-8DD5-B6C234148289}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73F84BC5-FEA2-4B91-B54F-1200D8C3BBE1}
+	EndGlobalSection
+EndGlobal

@@ -15,8 +15,9 @@
     <Product />
     <Description>An Integration for NRule that adds support for the microsoft dependency injection container.</Description>
     <PackageProjectUrl>https://github.com/cloudb0x/NRules.Integration.AspNetCore</PackageProjectUrl>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

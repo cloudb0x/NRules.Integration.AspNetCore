@@ -11,15 +11,25 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  Major: '1'
-  Minor: '0'
-  Patch: '1'
+  major: 1
+  minor: 0
+  patch: $[counter('myversioncounter', 0)]
 
 steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: $(major)
+    minorVersion: $(minor)
+    patchVersion: $(patch)
+
 
 
 

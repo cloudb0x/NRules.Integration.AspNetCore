@@ -18,6 +18,11 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '${Build.SourcesDirectory}'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: NuGetCommand@2
   inputs:
     command: 'push'

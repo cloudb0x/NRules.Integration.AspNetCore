@@ -10,12 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  majorMinorVersion: 1.0
-  # semanticVersion counter is automatically incremented by one in each execution of pipeline
-  # second parameter is seed value to reset to every time the referenced majorMinorVersion is changed
-  Version.MajorMinor: 1.0
-  Version.Revision: $[counter(variables['Version.MajorMinor'], 0)]
   buildConfiguration: 'Release'
+  Major: '1'
+  Minor: '0'
+  Patch: '1'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -23,12 +21,13 @@ steps:
     command: 'build'
     projects: '**/*.csproj'
 - task: NuGetCommand@2
-  displayName: 'NuGet pack'
   inputs:
     command: 'pack'
-    feedsToUse: 'config'
     packagesToPack: '**/*.csproj'
-    versioningScheme: 'byBuildNumber'
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+    patchVersion: '$(Patch)'
 - task: NuGetCommand@2
   inputs:
     command: 'push'

@@ -20,7 +20,8 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-- task: NuGetCommand@2
+
+- task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
@@ -28,6 +29,7 @@ steps:
     majorVersion: '$(Major)'
     minorVersion: '$(Minor)'
     patchVersion: '$(Patch)'
+    
 - task: NuGetCommand@2
   inputs:
     command: 'push'

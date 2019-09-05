@@ -20,7 +20,7 @@ steps:
     projects: '**/*.csproj'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '${Build.SourcesDirectory}'
+    SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: NuGetCommand@2

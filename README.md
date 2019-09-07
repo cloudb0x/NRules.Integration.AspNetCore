@@ -1,4 +1,8 @@
+
 # NRules.Integration.AspNetCore
+
+[![Build Status](https://dev.azure.com/claudiosteppe/NRules.Integration.AspNetCore/_apis/build/status/cloudb0x.NRules.Integration.AspNetCore?branchName=master)![Nuget](https://img.shields.io/nuget/v/NRules.Integration.AspNetCore)
+](https://dev.azure.com/claudiosteppe/NRules.Integration.AspNetCore/_build/latest?definitionId=2&branchName=master)
 
 An Integration For Nrules for Asp .Net Core for the built in Dependency Injection container.
 

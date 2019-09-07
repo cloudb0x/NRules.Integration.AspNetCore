@@ -33,7 +33,7 @@ Startup.cs
 
 ## Usage
 
-Simply Injecting `ISession` into your dependency is enough.
+Simply Injecting `ISession` into your dependency is enough. This Calls the `ISessionFactory` and creates a new scoped session.
 
     public class SomeService : ISomeService
     {

@@ -16,8 +16,11 @@ namespace NRules.Integration.AspNetCore
 
         public static IApplicationBuilder UseNRule(this IApplicationBuilder app)
         {
-            var repo = app.ApplicationServices.GetRequiredService<RuleRepository>();
-            var factory = app.ApplicationServices.GetRequiredService<ISessionFactory>();
+            var repo = app.ApplicationServices.GetService<RuleRepository>();
+            var factory = app.ApplicationServices.GetService<ISessionFactory>();
+
+            if (factory == null || repo == null)
+                throw new InvalidOperationException("Dependencies not registered. Call AddNRules in Startup.cs");
 
             repo.Activator = new AspNetCoreRuleActivator(app.ApplicationServices);
             factory.DependencyResolver = new AspNetCoreDependencyResolver(app.ApplicationServices);

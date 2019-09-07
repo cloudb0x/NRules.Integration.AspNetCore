@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="Globals">
     <SccProjectName>SAK</SccProjectName>
@@ -13,11 +13,11 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Authors>Claudio Steppe</Authors>
     <Product />
-    <Description>An Integration for NRule that adds support for the microsoft dependency injection container.</Description>
+    <Description>Integration support for Asp .Net Core in to NRules.</Description>
     <PackageProjectUrl>https://github.com/cloudb0x/NRules.Integration.AspNetCore</PackageProjectUrl>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

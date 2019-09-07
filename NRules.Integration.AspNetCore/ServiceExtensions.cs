@@ -12,7 +12,7 @@ namespace NRules.Integration.AspNetCore
     public static class ServiceExtensions
     {
 
-        public static IServiceCollection AddNRules(this IServiceCollection services, Assembly[] assemblies)
+        public static IServiceCollection AddNRule(this IServiceCollection services, Assembly[] assemblies)
         {
             services.RegisterRepository(r =>
                       {

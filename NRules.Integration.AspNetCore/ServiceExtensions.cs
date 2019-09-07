@@ -33,7 +33,7 @@ namespace NRules.Integration.AspNetCore
             scanner.Assembly(assemblies);
             var ruleTypes = scanner.GetRuleTypes();
 
-            services.AddManySingletons(ruleTypes);
+            services.AddManyScoped(ruleTypes);
 
             return ruleTypes;
         }
@@ -68,12 +68,12 @@ namespace NRules.Integration.AspNetCore
         }
 
         #endregion
-        private static IServiceCollection AddManySingletons(this IServiceCollection services, Type[] types)
+        private static IServiceCollection AddManyScoped(this IServiceCollection services, Type[] types)
         {
 
             for (int i = 0; i < types.Length; i++)
             {
-                services.AddSingleton(types[i]);
+                services.AddScoped(types[i]);
             }
             return services;
         }

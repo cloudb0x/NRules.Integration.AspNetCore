@@ -14,7 +14,7 @@ namespace NRules.Integration.AspNetCore
     public static class ApplicationExtensions
     {
 
-        public static IApplicationBuilder UseNRule(this IApplicationBuilder app)
+        public static IApplicationBuilder UseNRules(this IApplicationBuilder app)
         {
             var repo = app.ApplicationServices.GetService<RuleRepository>();
             var factory = app.ApplicationServices.GetService<ISessionFactory>();
